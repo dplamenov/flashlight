@@ -1,20 +1,42 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>
+            Percentage Calculator
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-header collapse="condense">
+        <ion-toolbar>
+            <ion-title size="large">Percentage Calculator</ion-title>
+        </ion-toolbar>
+    </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <div id="container">
+        <form #f1="ngForm">
+            <ion-item>
+                <span>What is </span>
+                <ion-input ngModel #f11="ngModel" name="f11"></ion-input>
+                <span> % of </span>
+                <ion-input ngModel></ion-input>
+                <span> ?</span>
+            </ion-item>
+            <ion-item *ngIf="f11.touched ">Result 1</ion-item>
+        </form>
+        <ion-item>
+            <ion-input></ion-input>
+            <span> is what percent of </span>
+            <ion-input></ion-input>
+            <span> ?</span>
+        </ion-item>
+        <ion-item>Result 2</ion-item>
+        <!-- <ion-item>
+            <span>What is </span>
+            <ion-input></ion-input>
+            <span> % of </span>
+            <ion-input></ion-input>
+            <span> ?</span>
+        </ion-item> -->
+    </div>
 </ion-content>
